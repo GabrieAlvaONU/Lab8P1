@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <string>
 using namespace std;
@@ -14,8 +13,8 @@ int main() {
     if (input == "Q" || input == "q") {
         return 0;
     }
-    string test = "hello world";
-    cout << "TEST:" << countVowel(test);
+
+    cout << "Vowel count: " << countVowel(input) << endl;
 
     return 0;
 }
