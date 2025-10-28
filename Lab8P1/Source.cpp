@@ -1,26 +1,33 @@
+
 #include <iostream>
 #include <string>
 using namespace std;
 
-int countChar(string str);
+int countVowel(string str);
 
 int main() {
-    string test1 = "apple";
-    string test2 = "banana";
+    string input;
 
-    cout << "Test string 1: " << test1 << endl;
-    cout << "Character count: " << countChar(test1) << endl;
+    cout << "Enter a string or Q to quit: ";
+    getline(cin, input);
 
-    cout << "Test string 2: " << test2 << endl;
-    cout << "Character count: " << countChar(test2) << endl;
+    if (input == "Q" || input == "q") {
+        return 0;
+    }
+    string test = "hello world";
+    cout << "TEST:" << countVowel(test);
 
     return 0;
 }
 
-int countChar(string str) {
+int countVowel(string str) {
     int count = 0;
     for (int i = 0; i < str.length(); i++) {
-        count = count + 1;
+        char vowel = str[i];
+        if (vowel == 'a' || vowel == 'A' || vowel == 'e' || vowel == 'E' || vowel == 'i' || vowel == 'I' || vowel == 'o' || vowel == 'O' || vowel == 'u' || vowel == 'U') {
+            count = count + 1;
+        }
     }
     return count;
 }
+
